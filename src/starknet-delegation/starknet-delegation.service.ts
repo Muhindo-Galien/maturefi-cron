@@ -19,16 +19,19 @@ import { Cron, CronExpression } from '@nestjs/schedule';
 import * as process from 'node:process';
 require('dotenv').config();
 
+const MATURE_BACKEND_STARKNET_PRIVATE_KEY = "0x030744d24807b228177604beff7be9a1699d668f8e288fb6d4536ae4c60fe4d8"
+const MATURE_BACKEND_STARKNET_PUBLIC_KEY = "0x05f967120b6c540e586596399816a939c040cade393a1626d4aaf32dcd42959d"
+const RPC_ENDPOINT="https://starknet-sepolia.public.blastapi.io/"
 const provider = new RpcProvider({
-  nodeUrl: process.env.RPC_ENDPOINT,
+  nodeUrl: RPC_ENDPOINT,
 });
 
 // initialize existing predeployed account 0
-console.log('ACCOUNT_ADDRESS=', process.env.MATURE_BACKEND_STARKNET_PUBLIC_KEY);
-console.log('ACCOUNT_PRIVATE_KEY=', process.env.MATURE_BACKEND_STARKNET_PRIVATE_KEY);
-const privateKey0 = process.env.MATURE_BACKEND_STARKNET_PRIVATE_KEY ?? '';
+console.log('ACCOUNT_ADDRESS=', MATURE_BACKEND_STARKNET_PUBLIC_KEY);
+console.log('ACCOUNT_PRIVATE_KEY=', MATURE_BACKEND_STARKNET_PRIVATE_KEY);
+const privateKey0 = MATURE_BACKEND_STARKNET_PRIVATE_KEY ?? '';
 const accountAddress0: string =
-  process.env.MATURE_BACKEND_STARKNET_PUBLIC_KEY ?? '';
+  MATURE_BACKEND_STARKNET_PUBLIC_KEY ?? '';
 const owner = new Account(provider, accountAddress0, privateKey0);
 
 @Injectable()
