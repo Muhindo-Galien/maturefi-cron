@@ -13,9 +13,9 @@ export const STARKNET_RPC_PROVIDER =
   'https://starknet-sepolia.infura.io/v3/2XRMi0uFa4HRoeUk9DGXmQCEQX9';
 
 export const MA_STRK_TOKEN_ADDRESS =
-  '0x00e09247cf092bafda2307df5bb7bbf727bd715f8efd3bebc3cd39ca7bcba863';
+  '0x1182e0e22373ee8ac3235cbd79c65e90f2a06c5a51e3234bf3f0b8aa495ac23';
 export const STARKNET_VAULT_ADDRESS =
-  '0x05c0b1c170b753578a3358e08274e630de0c7ed32423456ae2e2071c31c01a00';
+  '0x382fa3be556536f6bd62ef4d9b7d5a123ee2b4908114ccb0e03754ba028f28';
 export const STRK_TOKEN_ADDRESS =
   '0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d';
 export const STARKNET_STAKING_POOL_ADDRESS =
